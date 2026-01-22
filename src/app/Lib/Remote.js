@@ -1,13 +1,8 @@
 import axios from "axios";
-
 const api = axios.create({
   baseURL: 'https://ttmfapi.jkxqxrxo.cn/api/',
   timeout: 10000,
-  headers: {
-    "Content-Type": "application/json",
-  },
 });
-
 function handleError(err) {
   let status = 500;
   let message = "Unknown error";
@@ -20,10 +15,8 @@ function handleError(err) {
   } else {
     message = err.message;
   }
-
   return { data: null, status, error: message };
 }
-
 export const Remote = {
   async get(endpoint, params = {}) {
     try {
@@ -33,7 +26,6 @@ export const Remote = {
       return handleError(err);
     }
   },
-
   async post(endpoint, payload = {}) {
     try {
       const response = await api.post(endpoint, payload);
@@ -42,7 +34,6 @@ export const Remote = {
       return handleError(err);
     }
   },
-
   async put(endpoint, payload = {}) {
     try {
       const response = await api.put(endpoint, payload);
@@ -51,7 +42,6 @@ export const Remote = {
       return handleError(err);
     }
   },
-
   async delete(endpoint, params = {}) {
     try {
       const response = await api.delete(endpoint, { params });

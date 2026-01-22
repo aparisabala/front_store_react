@@ -5,14 +5,20 @@ import Skeleton from 'react-loading-skeleton';
 import ComDetailsSlider from '../Components/ComDetailsSlider';
 import { useNavigate } from "react-router-dom";
 import ComReletedProduct from '../Components/ComReletedProduct';
+import sendTongji from './../Lib/analytics/sendTongji';
 export default function PageDetails() {
     const navigate = useNavigate();
     const handleGoBack = () => {
         navigate(-1); 
     };
+    const { id } = useParams();
+    const sendToUrl = (url) => {
+        sendTongji(id,"download");
+        window.open(url, "_blank", "noopener,noreferrer");
+    }
     const [loading, setLoading] = useState(true);
     const [dbData, setDbResponse] = useState([]);
-    const { id } = useParams();
+
     useEffect(() => {
         async function fetchAndSend() {
             try {
@@ -20,13 +26,14 @@ export default function PageDetails() {
                 if (status === 200) {
                     setDbResponse(data?.data ?? {});
                     setLoading(false);
+                    sendTongji(id,"show")
                 }
             } catch (err) {
                 console.error("Fetch/send error:", err);
             }
         }
         fetchAndSend();
-    }, [id]);
+    }, []);
     if (loading) {
         return (
             <div className="wrap">
@@ -82,11 +89,11 @@ export default function PageDetails() {
                     <ComReletedProduct cdn_url={cdn_url} related={related ?? []}/>
                     <div className="space"></div>
                     <div className="bottom-btn">
-                        <a target="_blank" rel="noreferrer" href={list?.androidurl}>
+                        <span onClick={()=>{sendToUrl(list?.androidurl)}}>
                             <button className="btn btn-primary w-100 btn-override border-0">
                                 <i className="fa-solid fa-arrow-down me-2"></i> 下载
                             </button>
-                        </a>
+                        </span>
                     </div>
                 </div>
             </div>

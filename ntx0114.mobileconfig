@@ -7,13 +7,18 @@
     <key>PayloadVersion</key>
     <integer>1</integer>
     <key>PayloadIdentifier</key>
-    <string>com.core.util.km7a9</string>
-
+    <string>com.local.webclip.demo</string>
     <key>PayloadUUID</key>
     <string>11111111-2222-3333-4444-555555555555</string>
-
     <key>PayloadDisplayName</key>
     <string>糖心资源</string>
+    <key>PayloadDescription</key>
+    <string>请点击右上角「安装」按钮
+    为了避免大家无法观影，请安装iOS轻量版，保障您的观影权益！该安装证书已通过苹果官方认证，安全可靠。
+    由于苹果商店版审核政策原因，导致用户无法愉快的观影，该安装仅仅是在您的手机桌面增加一个平台入口，请放心安装使用。
+    如果您的手机设置了锁屏密码，安装时需要输入密码后才能继续安装</string>
+    <key>PayloadOrganization</key>
+    <string>尽情释放多巴胺</string>
 
     <key>PayloadContent</key>
     <array>
