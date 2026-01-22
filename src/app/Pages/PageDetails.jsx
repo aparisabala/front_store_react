@@ -33,7 +33,7 @@ export default function PageDetails() {
             }
         }
         fetchAndSend();
-    }, []);
+    }, [id]);
     if (loading) {
         return (
             <div className="wrap">
