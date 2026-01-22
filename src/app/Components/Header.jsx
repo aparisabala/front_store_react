@@ -24,7 +24,7 @@ export default function Header({query=''}) {
       }
     }
     fetchAndSend();
-  });
+  },[]);
 
   if (loading) {
     return (

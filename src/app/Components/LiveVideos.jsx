@@ -22,7 +22,7 @@ export default function LiveVideos({ query, title='' }) {
       }
     }
     fetchAndSend();
-  });
+  },[]);
   if (loading) {
     return (
       <div className="wrap">

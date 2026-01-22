@@ -18,7 +18,7 @@ export default function Announcement({query}) {
             }
         }
         fetchAndSend();
-    });
+    },[]);
 
     if (loading) {
         return (

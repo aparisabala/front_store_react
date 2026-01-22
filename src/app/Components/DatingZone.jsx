@@ -22,7 +22,7 @@ export default function DatingZone({query,title=''}) {
       }
     }
     fetchAndSend();
-  });
+  },[]);
   if (loading) {
     return (
       <div className="wrap">

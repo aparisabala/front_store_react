@@ -20,7 +20,7 @@ export default function RecomendedOther({query}) {
       }
     }
     fetchAndSend();
-  }, []);
+  },[]);
   if (loading) {
     return (
       <div className="wrap">
