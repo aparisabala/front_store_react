@@ -55,8 +55,8 @@
 }
 
 .icon-wrap img {
-  width: 60px;
-  height: 60px;
+  width: 65px;
+  height: 65px;
   border-radius: 12px;
   object-fit: cover;
 }
@@ -210,12 +210,6 @@
     box-sizing: border-box;
 }
 
-.recon-item img {
-    width: 80px;
-    height: 80px;
-    display: block;
-    border-radius: 8px;
-}
 .marquee {
     width: 100%;
     overflow: hidden;
