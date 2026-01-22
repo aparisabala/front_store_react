@@ -26,7 +26,7 @@ export default function FooterMenu() {
                         <div>
                             <i className="fa fa-heart icon-img cursor-pointer"></i>
                         </div>
-                        <div className="footer-text cursor-pointer">青楼</div>
+                        <div className="footer-text cursor-pointer">约炮</div>
                     </div>
                     </NavLink>
                     <NavLink to="/live" className={({ isActive }) =>isActive ? 'text-orange' : 'nav-link'}> 
