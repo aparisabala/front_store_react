@@ -1,0 +1,205 @@
+@import './px.css';
+.mySwiper, .mySwiper-page {
+    width: 100%;
+    height: 100%;
+}
+.mySwiper .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 220px;
+}
+
+.mySwiper-page  .swiper-slide {
+    text-align: center;
+    font-size: 18px;
+    background: #444;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    height: 300px;
+}
+.mySwiper-page .swiper-slide img {
+    display: block;
+    height: 100%;
+}
+
+.mySwiper .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+.recon-item {
+    justify-items: center;
+    width: 100%;
+}
+.recon-item  img {
+    height: 60px;
+}
+.install-btn {
+    cursor: pointer;
+    border-radius: 25px;
+    padding: 1px 8px;
+    color: rgba(234,88,12);
+    border: 1px solid rgba(234,88,12);
+}
+.space {
+    padding-top: 100px;
+}
+.footer-menu {
+    padding: 10px 0;
+    background-color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+}
+.icon-img {
+    font-size: 17px;
+}
+.footer-text {
+    font-size: 15px;
+}
+.mq-bg {
+    background-color: #fffbe8;
+}
+.item-banner {
+    height: 32px;
+    width: 100%;
+}
+.text-part {
+    width: 50%;
+}
+.other-image-base {
+    width: 45px;
+    width: 45px;
+}
+.dating-item {
+    width: 50%;
+    padding: 3px 2px 2px 3px;
+}
+.dating-item img {
+    width: 100%;
+    height: 320px;
+    border-radius: 8px;
+}
+.dating-btn {
+    background-color: rgb(248 113 113);
+    border-radius: 6px;
+    left: 10px;
+    top: 10px;
+    font-size: 14px;
+    padding: 3px 12px 2px 12px;
+    color: white;
+}
+.details-head {
+    background-color: #87cefa;
+}
+.wrap {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+.cursor-pointer {
+    cursor: pointer;
+}
+@media screen and (min-width: 768px) {
+    .wrap {
+        position: relative;
+        width: 450px;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+}
+.gradient-box {
+    width: 100%;
+    margin: 8px 0;
+    background: linear-gradient(to right, #ffcb13, #fff0ba);
+}
+.footer-link {
+    color: #5f5f5f;
+    text-decoration: none;
+}
+.bg-gradient-pink {
+    background: linear-gradient(to right, #a855f7, #ec4899);
+}
+
+.text-orange {
+    color: orange !important;
+    color: black;
+    text-decoration: none;
+}
+.detail-bar {
+    background-color: #87cefa;
+}
+
+.bottom-btn {
+    position: absolute;
+    bottom: 80px;
+}
+.bottom-btn {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 60px;
+    z-index: 1000;
+    padding: 0 12px; 
+}
+
+.btn-override {
+    height: 40px;
+    font-size: 18px;
+    background-color: #fbbf24 !important;
+}
+
+.recon-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px; 
+}
+.recon-item {
+    flex: 0 0 calc(20% - 8px);
+    max-width: calc(20% - 8px);
+    box-sizing: border-box;
+}
+
+.recon-item img {
+    width: 80px;
+    height: 80px;
+    display: block;
+    border-radius: 8px;
+}
+.marquee {
+    width: 100%;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    background: #fffbe8;
+    color: #ed6a0c;
+    padding: 8px 0;
+    font-size: 13px;
+}
+
+.marquee-content {
+    display: inline-block;
+    padding-left: 100%; 
+    animation: marquee 30s linear infinite;
+}
+
+.marquee-content:hover {
+    animation-play-state: paused;   
+}
+
+@keyframes marquee {
+    0%   { transform: translateX(0); }
+    100% { transform: translateX(-100%); }
+}
+
+.marquee-content span {
+    display: inline-block;
+    padding-right: 4rem;  
+}
