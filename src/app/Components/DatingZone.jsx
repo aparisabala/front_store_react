@@ -37,7 +37,7 @@ export default function DatingZone({query,title=''}) {
     <React.Fragment>
       <div className={`container ${(title != '') ? '':'p-0'}`}>
         <div className="gradient-box">
-          <h5 className="m-0 p-2 text-white">约会区 Dating Zone</h5>
+          <h5 className="m-0 p-2 text-white">同城约炮 Dating Zone</h5>
         </div>
       </div>
 

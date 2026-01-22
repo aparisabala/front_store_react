@@ -32,13 +32,60 @@
     width: 100%;
     height: 100%;
 }
+.recon-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3px 8px;
+}
+
 .recon-item {
-    justify-items: center;
-    width: 100%;
+  width: calc(20% - 8px); 
+  background: #fff;
+  border-radius: 10px;
+  box-sizing: border-box;
+  text-align: center;
+  cursor: pointer;
 }
-.recon-item  img {
-    height: 60px;
+
+/* ICON */
+.icon-wrap {
+  width: 100%;
+  display: flex;
+  justify-content: center;
 }
+
+.icon-wrap img {
+  width: 60px;
+  height: 60px;
+  border-radius: 12px;
+  object-fit: cover;
+}
+
+/* APP NAME */
+.app-name {
+  font-size: 14px;
+  font-weight: 600;
+  height: 20px;           
+  overflow: hidden;
+  margin-top: 2px;
+}
+
+/* DOWNLOAD */
+.download-wrap {
+  margin-top: 2px;
+}
+
+.download-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  color: rgba(234,88,12);
+  border: 1px solid rgba(234,88,12);
+  border-radius: 14px;
+  padding: 1px 6px;
+}
+
 .install-btn {
     cursor: pointer;
     border-radius: 25px;
@@ -156,11 +203,7 @@
     background-color: #fbbf24 !important;
 }
 
-.recon-row {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px; 
-}
+
 .recon-item {
     flex: 0 0 calc(20% - 8px);
     max-width: calc(20% - 8px);
