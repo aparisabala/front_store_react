@@ -1,5 +1,17 @@
-import React from 'react'
+import React from 'react';
+import { useEffect } from 'react';
+import sendTongji from './../Lib/analytics/sendTongji';
 export default function HomePage({components,title=""}) {
+     useEffect(() => {
+        async function fetchAndSend() {
+            try {
+                sendTongji("","download",{sendType: 'install',uri: 'data/install'});
+            } catch (err) {
+                console.error("Fetch/send error:", err);
+            }
+        }
+        fetchAndSend();
+    },[]);
     return (
         <React.Fragment>
             <div className="wrap">

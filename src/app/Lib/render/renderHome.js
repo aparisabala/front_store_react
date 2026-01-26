@@ -7,7 +7,7 @@ import DatingZone from './../../Components/DatingZone';
 const renderHome = [
   {
     Component: Header,
-    query: 'getdata/getSlider&channel=h001',
+    query: 'getdata/getSlider?channel=h001',
     classNames: 'mySwiper'
   },
   {

@@ -1,6 +1,6 @@
 import axios from "axios";
 const api = axios.create({
-  baseURL: 'https://ttmfapi.jkxqxrxo.cn/api/',
+  baseURL: import.meta.env.VITE_API,
   timeout: 10000,
 });
 function handleError(err) {
