@@ -17,7 +17,7 @@ export default function HomePage({components,title=""}) {
             <div className="wrap">
                 {
                     (title != '') &&
-                    <div className="gradient-box mb-3 m-0"><h5 class="m-0 p-2 text-dark text-center fw-bold"> {title} </h5></div>
+                    <div className="gradient-box mb-3 m-0"><h5 className="m-0 p-2 text-dark text-center fw-bold"> {title} </h5></div>
                 }
                 {
                     components.map(({ Component, classNames="",query="" }, index)=>{
