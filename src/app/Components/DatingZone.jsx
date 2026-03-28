@@ -52,10 +52,10 @@ export default function DatingZone({query,title=''}) {
                 {
                   rows?.map((item, key) => {
                     return (
-                      <div className="flex-fill dating-item cursor-pointer" key={cKey + '_' + key} onClick={()=>{goToProduct(item)}}>
+                      <div className="col-6 dating-item cursor-pointer" key={cKey + '_' + key} onClick={()=>{goToProduct(item)}}>
                         <div className="position-relative">
                           <div className="position-absolute dating-btn">
-                            {item?.dn_nm} 人约过
+                            {item?.downnum}人约过
                           </div>
                           <img alt={item?.name} className="img-fluid"
                             src={cdn_url + '/' + item?.img} />

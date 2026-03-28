@@ -78,7 +78,7 @@ export default function PageDetails() {
                                     <div>
                                         <h6 className="fw-bold mb-2 fs-18">{list?.name}</h6>
                                         <h6 className="fw-bold mb-2 fs-12">{list?.pname}</h6>
-                                        <h6 className="fw-bold mb-1 fs-12">下载次数: {list?.dn_nm} </h6>
+                                        <h6 className="fw-bold mb-1 fs-12">下载次数: {list?.downnum} </h6>
                                     </div>
                                 </div>
                             </div>
