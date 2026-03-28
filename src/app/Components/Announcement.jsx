@@ -27,7 +27,6 @@ export default function Announcement({query}) {
     if (loading) {
         return (
           <div className="wrap">
-            <Skeleton count={5} />
           </div>
         )
     }

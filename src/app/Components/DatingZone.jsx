@@ -30,7 +30,6 @@ export default function DatingZone({query,title=''}) {
   if (loading) {
     return (
       <div className="wrap">
-          <Skeleton count={5} />
       </div>
     )
   }
@@ -58,11 +57,11 @@ export default function DatingZone({query,title=''}) {
                           <div className="position-absolute dating-btn">
                             {item?.dn_nm} 人约过
                           </div>
-                          <img alt={item?.new_name} className="img-fluid"
+                          <img alt={item?.name} className="img-fluid"
                             src={cdn_url + '/' + item?.img} />
                           <div>
                             <h5 className="fs-15 fw-bold mt-1">
-                              {item?.new_name} 
+                              {item?.name} 
                             </h5>
                           </div>
                         </div>

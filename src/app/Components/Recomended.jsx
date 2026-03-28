@@ -28,7 +28,6 @@ export default function Recomended({ query, title = "" }) {
   if (loading) {
     return (
       <div className="wrap">
-        <Skeleton count={5} />
       </div>
     );
   }
@@ -49,10 +48,10 @@ export default function Recomended({ query, title = "" }) {
               onClick={() => goToProduct(item)}
             >
               <div className="icon-wrap">
-                <img src={cdn_url + "/" + item?.img} alt={item?.new_name} />
+                <img src={cdn_url + "/" + item?.img} alt={item?.name} />
               </div>
 
-              <div className="app-name">{item?.new_name}</div>
+              <div className="app-name">{item?.name}</div>
 
               <span className="download-btn">
                 <i className="fa fa-arrow-down"></i>

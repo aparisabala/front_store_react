@@ -28,7 +28,7 @@ export default function ComReletedProduct({ related, cdn_url }) {
                                 />
                             </div>
                             <div className="fs-11 fw-bold mt-1 text-center fixProductNameHeight">
-                                {item?.new_name}
+                                {item?.name}
                             </div>
                             <div className="mt-1">
                                 <span className="d-flex justify-content-center align-items-center install-btn fs-12 cursor-pointer">

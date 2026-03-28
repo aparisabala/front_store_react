@@ -28,7 +28,6 @@ export default function RecomendedOther({query}) {
   if (loading) {
     return (
       <div className="wrap">
-          <Skeleton count={5} />
       </div>
     )
   }
@@ -43,10 +42,10 @@ export default function RecomendedOther({query}) {
                 <div className="position-relative">
                   <div className="mb-2 d-flex w-100 justify-content-start">
                     <div className="other-image-base me-1">
-                      <img alt={item?.new_name} className="img-fluid" src={cdn_url + '/' + item?.img} />
+                      <img alt={item?.name} className="img-fluid" src={cdn_url + '/' + item?.img} />
                     </div>
                     <div className="text-part d-block me-auto">
-                      <h5 className="fs-14 fw-bold m-0 mb-1">{item?.new_name}</h5>
+                      <h5 className="fs-14 fw-bold m-0 mb-1">{item?.name}</h5>
                       <p className="fs-12 m-0">{item?.slogan}</p>
                     </div>
                     <div className="d-block align-self-center">

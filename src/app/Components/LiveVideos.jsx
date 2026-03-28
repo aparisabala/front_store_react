@@ -30,7 +30,6 @@ export default function LiveVideos({ query, title='' }) {
   if (loading) {
     return (
       <div className="wrap">
-          <Skeleton count={5} />
       </div>
     )
   }
@@ -56,14 +55,14 @@ export default function LiveVideos({ query, title='' }) {
                     return (
                       <div className="flex-fill dating-item" key={cKey + '_' + key} onClick={()=>{goToProduct(item)}}>
                         <div className="position-relative">
-                          <img alt={item?.new_name} className="img-fluid" src={cdn_url + '/' + item?.img} />
+                          <img alt={item?.name} className="img-fluid" src={cdn_url + '/' + item?.img} />
                           <button className="btn btn-light position-absolute top-50 start-50 translate-middle d-flex align-items-center justify-content-center bg-transparent border-0" style={{ width: "48px", height: "48px" }}>
                             <i className="fa-regular fa-circle-play text-white fs-32"></i>
                           </button>
                           <div className="position-absolute bottom-0 mb-4">
                             <h5 className="fs-15 fw-bold mt-1 ps-2 pe-2">
                               <span className="text-white bg-gradient-pink me-2 small rounded">热门 </span>
-                              <span className="text-white"> {item?.new_name}  </span>
+                              <span className="text-white"> {item?.name}  </span>
                             </h5>
                             <p className="m-0"></p>
                           </div>

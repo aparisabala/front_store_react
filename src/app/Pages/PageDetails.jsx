@@ -6,6 +6,7 @@ import ComDetailsSlider from '../Components/ComDetailsSlider';
 import { useNavigate } from "react-router-dom";
 import ComReletedProduct from '../Components/ComReletedProduct';
 import sendTongji from './../Lib/analytics/sendTongji';
+import { decryptServerData } from '../Lib/decryptServerData';
 export default function PageDetails() {
     const navigate = useNavigate();
     const handleGoBack = () => {
@@ -22,11 +23,14 @@ export default function PageDetails() {
     useEffect(() => {
         async function fetchAndSend() {
             try {
-                const { data, status } = await Remote.get(`getdata/getDetails?id=${id}&channel=h001`);
+                const { data, status } = await Remote.get(`getdata/detail?id=${id}&channel=h001`);
                 if (status === 200) {
-                    setDbResponse(data?.data ?? {});
-                    setLoading(false);
-                    sendTongji(id,"show")
+                    const result = decryptServerData(data);
+                    if(result?.status == 200) {
+                        setDbResponse(result?.data ?? {});
+                        setLoading(false);
+                        sendTongji(id,"show")
+                    } 
                 }
             } catch (err) {
                 console.error("Fetch/send error:", err);
@@ -37,7 +41,7 @@ export default function PageDetails() {
     if (loading) {
         return (
             <div className="wrap">
-                <Skeleton count={5} />
+                
             </div>
         )
     }

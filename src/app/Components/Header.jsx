@@ -32,7 +32,8 @@ export default function Header({query=''}) {
 
   if (loading) {
     return (
-      <Skeleton count={5} />
+      <div className="wrap">
+      </div>
     )
   }
   const {cdn_url = "", list=[]} = dbData;
