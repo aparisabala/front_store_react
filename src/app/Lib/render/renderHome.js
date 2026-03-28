@@ -12,19 +12,19 @@ const renderHome = [
   },
   {
     Component: Announcement,
-    query: 'getdata/getAnnouncement'
+    query: 'data/getannounce?channel=h001'
   },
   {
     Component: Recomended,
-    query: 'getdata/getProducts?pid=13&page=1&limit=80&channel=h001'
+    query: 'getdata/gettypeproducts?pid=13&page=1&limit=80&channel=h001'
   },
   {
     Component: RecomendedOther,
-    query: 'getdata/getProducts?pid=23&page=1&limit=50&channel=h001'
+    query: 'getdata/gettypeproducts?pid=23&page=1&limit=50&channel=h001'
   },
   {
     Component: DatingZone,
-    query: 'getdata/getProducts?pid=14&page=1&limit=50&channel=h001'
+    query: 'getdata/gettypeproducts?pid=14&page=1&limit=50&channel=h001'
   }
 ];
 

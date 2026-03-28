@@ -3,6 +3,7 @@ import Skeleton from "react-loading-skeleton";
 import "react-loading-skeleton/dist/skeleton.css";
 import { Remote } from "../Lib/Remote";
 import { useNavigateToProduct } from "../Lib/render/useNavigateToProduct";
+import { decryptServerData } from "../Lib/decryptServerData";
 export default function Recomended({ query, title = "" }) {
   const goToProduct = useNavigateToProduct();
   const [dbData, setDbData] = useState([]);
@@ -12,8 +13,11 @@ export default function Recomended({ query, title = "" }) {
       try {
         const { data, status } = await Remote.get(query);
         if (status === 200) {
-          setDbData(data?.data);
-          setLoading(false);
+          const result = decryptServerData(data);
+          if(result?.status == 200) {
+            setDbData(result?.data);
+            setLoading(false);
+          } 
         }
       } catch (err) {
         console.error("Fetch/send error:", err);

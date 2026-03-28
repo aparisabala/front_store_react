@@ -2,6 +2,7 @@ import Skeleton from "react-loading-skeleton";
 import 'react-loading-skeleton/dist/skeleton.css'
 import { Remote } from '../Lib/Remote';
 import React, { useEffect, useState } from 'react'
+import { decryptServerData } from "../Lib/decryptServerData";
 export default function Announcement({query}) {
     const [loading, setLoading] = useState(true);
     const [dbData, setDbResponse] = useState([]);
@@ -10,8 +11,11 @@ export default function Announcement({query}) {
             try {
                 const { data, status } = await Remote.get(query);
                 if (status === 200) {
-                    setDbResponse(data?.announce?.value ?? '');
-                    setLoading(false);
+                    const result = decryptServerData(data);
+                    if(result?.status == 200) {
+                        setDbResponse(result?.announce);
+                        setLoading(false);
+                    } 
                 }
             } catch (err) {
                 console.error("Fetch/send error:", err);
